@@ -3,20 +3,20 @@
 -- Add any additional options here
 
 -- vim.opt.modifiable = true
-vim.g["diagnostics_active"] = true
-function Toggle_diagnostics()
-  if vim.g.diagnostics_active then
-    vim.g.diagnostics_active = false
-    vim.diagnostic.disable()
-  else
-    vim.g.diagnostics_active = true
-    vim.diagnostic.enable()
-  end
-end
-
-vim.keymap.set(
-  "n",
-  "<leader>xd",
-  Toggle_diagnostics,
-  { noremap = true, silent = true, desc = "Toggle vim diagnostics" }
-)
+-- vim.g["diagnostics_active"] = true
+-- function Toggle_diagnostics()
+--   if vim.g.diagnostics_active then
+--     vim.g.diagnostics_active = false
+--     vim.diagnostic.disable()
+--   else
+--     vim.g.diagnostics_active = true
+--     vim.diagnostic.enable()
+--   end
+-- end
+--
+-- vim.keymap.set(
+--   "n",
+--   "<leader>xd",
+--   Toggle_diagnostics,
+--   { noremap = true, silent = true, desc = "Toggle vim diagnostics" }
+-- )
