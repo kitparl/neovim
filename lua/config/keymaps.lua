@@ -6,6 +6,11 @@ vim.keymap.set("n", "<leader>rn", ":IncRename ")
 vim.api.nvim_set_keymap("n", "<leader>dd", "diwi", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>dc", "diwi", { noremap = true, silent = true })
 
+-- copy current buffer path with file
+vim.api.nvim_set_keymap("n", "<leader>cpf", ':let @+ = expand("%:p")<CR>', { noremap = true, silent = true })
+-- copy current buffer path
+vim.api.nvim_set_keymap("n", "<leader>cpp", ":let @+ = expand('%:h')<CR>", { noremap = true, silent = true })
+
 vim.api.nvim_create_user_command("OpenConfig", function()
   -- Open nvim-tree
   vim.cmd("NvimTreeToggle")
