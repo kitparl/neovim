@@ -11,6 +11,11 @@ vim.api.nvim_set_keymap("n", "<leader>cpf", ':let @+ = expand("%:p")<CR>', { nor
 -- copy current buffer path
 vim.api.nvim_set_keymap("n", "<leader>cpp", ":let @+ = expand('%:h')<CR>", { noremap = true, silent = true })
 
+-- live server
+vim.keymap.set("n", "<leader>lt", function()
+  require("live-server-nvim").toggle()
+end)
+
 vim.api.nvim_create_user_command("OpenConfig", function()
   -- Open nvim-tree
   vim.cmd("NvimTreeToggle")
