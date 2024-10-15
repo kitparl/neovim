@@ -31,3 +31,44 @@ vim.api.nvim_create_user_command("OpenPlugin", function()
   -- Optionally navigate to a specific directory or file
   -- vim.cmd("edit ~/.config/nvim/plugins/") -- Uncomment if needed
 end, {})
+
+-- Run Program
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>z",
+  ':lua require("run_program.run_program").run_program()<CR>',
+  { noremap = true, silent = true }
+)
+
+-- Maven Binding
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>mc",
+  ":lua require('run_program.maven_run').run('clean install')<CR>",
+  { noremap = true, silent = true }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>mt",
+  ":lua require('run_program.maven_run').run('test')<CR>",
+  { noremap = true, silent = true }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>mr",
+  ":lua require('run_program.maven_run').run('compile exec:java')<CR>",
+  { noremap = true, silent = true }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>md",
+  ":lua require('run_program.maven_run').run('dependency:resolve')<CR>",
+  { noremap = true, silent = true }
+)
+-- Toggle terminal
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>tt",
+  ":lua require('run_program.maven_run').toggle_terminal()<CR>",
+  { noremap = true, silent = true }
+)
