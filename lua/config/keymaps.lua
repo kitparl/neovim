@@ -72,3 +72,9 @@ vim.api.nvim_set_keymap(
   ":lua require('run_program.maven_run').toggle_terminal()<CR>",
   { noremap = true, silent = true }
 )
+
+-- In your keymaps configuration
+vim.api.nvim_set_keymap("n", "<leader>sh", ":split<CR>", { desc = "Split horizontal" })
+vim.api.nvim_set_keymap("n", "<leader>sv", ":vsplit<CR>", { desc = "Split vertical" })
+vim.api.nvim_set_keymap("n", "<leader>sx", ":close<CR>", { desc = "Close split" })
+vim.api.nvim_set_keymap("n", "<leader>so", ":only<CR>", { desc = "Close other splits" })
