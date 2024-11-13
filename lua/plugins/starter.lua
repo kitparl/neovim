@@ -1,0 +1,9 @@
+-- return {
+--   "echasnovski/mini.starter",
+--   opts = function(_, opts)
+--     opts.header = [[
+--        Welcome to Neovim!
+--     ]]
+--     return opts
+--   end,
+-- }
