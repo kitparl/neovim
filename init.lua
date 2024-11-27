@@ -9,3 +9,5 @@ require("nvim-devdocs").setup({
 })
 
 require("autocommands")
+
+vim.g.autoformat = false
